@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { ImageBox2Service } from "./image-box2.service";
 
 
 @Component({
@@ -9,4 +10,10 @@ import { Component } from "@angular/core";
 
 export class ImageBoxComponent{
     name = 'hasbullah';
+    chars;
+  constructor(service: ImageBox2Service){
+    this.chars = service.getChars()
+  }
+
+  ngOnInit(){}
 }
